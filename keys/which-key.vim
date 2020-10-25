@@ -68,7 +68,7 @@ let g:which_key_map.F = {
       \ 'b' : [':Buffers'  , 'buffers'],
       \ 'g' : [':GFiles'  , 'git files'],
       \ 'c' : [':Commits'  , 'git commits'],
-      \ 'a' : [':Ag'  , 'ag search'],
+      \ 'r' : [':Rg'  , 'rg search'],
       \ }
 
 
