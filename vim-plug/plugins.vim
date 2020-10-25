@@ -19,12 +19,17 @@ call plug#begin(stdpath('data') . '/plugged')
   Plug 'jiangmiao/auto-pairs'
   Plug 'machakann/vim-sandwich'
   Plug 'preservim/nerdcommenter'
+  Plug 'tpope/vim-commentary'
   Plug 'tpope/vim-sleuth'
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'junegunn/fzf.vim'
   Plug 'liuchengxu/vim-which-key'
-
   Plug 'tpope/vim-surround'
+  Plug 'godlygeek/tabular'
+  Plug 'airblade/vim-rooter'
+
+
+  Plug 'mhinz/vim-startify'
 
   " Nerdtree
   Plug 'scrooloose/nerdtree'
@@ -35,16 +40,16 @@ call plug#begin(stdpath('data') . '/plugged')
   Plug 'airblade/vim-gitgutter'
   Plug 'tpope/vim-fugitive'
   Plug 'tpope/vim-rhubarb'
+  Plug 'rhysd/git-messenger.vim'
 
   "Term
-  "
   Plug 'voldikss/vim-floaterm'
   Plug 'mbbill/undotree'
 
   " Markdown Preview
   Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & npm install'  }
 
-    " async tasks
+  " async tasks
   Plug 'skywind3000/asynctasks.vim'
   Plug 'skywind3000/asyncrun.vim'
 
@@ -52,6 +57,13 @@ call plug#begin(stdpath('data') . '/plugged')
   Plug 'neomake/neomake'
   Plug 'neoclide/coc.nvim', { 'branch': 'release' }
   Plug 'sdiehl/vim-ormolu'
+
+  "search and replace
+  Plug 'ChristianChiarulli/far.vim'
+
+  "Plugins
+  Plug 'honza/vim-snippets'
+
 call plug#end()
 
 " Automatically install missing plugins on startup

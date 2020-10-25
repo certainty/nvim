@@ -1,0 +1,6 @@
+brew "neovim"
+brew "ranger"
+brew "ripgrep"
+tap "universal-ctags/universal-ctags"
+brew "lazygit"
+brew "lazydocker"

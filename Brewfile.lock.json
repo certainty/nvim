@@ -1,0 +1,90 @@
+{
+  "entries": {
+    "brew": {
+      "ranger": {
+        "version": "1.9.3",
+        "bottle": false
+      },
+      "ripgrep": {
+        "version": "12.1.1",
+        "bottle": {
+          "cellar": ":any",
+          "prefix": "/usr/local",
+          "files": {
+            "catalina": {
+              "url": "https://homebrew.bintray.com/bottles/ripgrep-12.1.1.catalina.bottle.tar.gz",
+              "sha256": "60460d422253113af3ed60332104f309638942821c655332211a6bc2213c472c"
+            },
+            "mojave": {
+              "url": "https://homebrew.bintray.com/bottles/ripgrep-12.1.1.mojave.bottle.tar.gz",
+              "sha256": "de4b18789f5d9bc4aaa4d906501200ae4ece7a1971dd1b86e2b2d0a2c8e0d764"
+            },
+            "high_sierra": {
+              "url": "https://homebrew.bintray.com/bottles/ripgrep-12.1.1.high_sierra.bottle.tar.gz",
+              "sha256": "cfea5335bf4eccfb7cd1d93bec234d96bd49dce8d593ea966687f777909ba291"
+            }
+          }
+        }
+      },
+      "lazygit": {
+        "version": "0.23.6",
+        "bottle": {
+          "cellar": ":any_skip_relocation",
+          "prefix": "/usr/local",
+          "files": {
+            "catalina": {
+              "url": "https://homebrew.bintray.com/bottles/lazygit-0.23.6.catalina.bottle.tar.gz",
+              "sha256": "4c0f8a5b8d3c42ae57082ce605f55134464c4b0de7a0be1c0edf5d8de78241e6"
+            },
+            "mojave": {
+              "url": "https://homebrew.bintray.com/bottles/lazygit-0.23.6.mojave.bottle.tar.gz",
+              "sha256": "017eb2230fcd14fb654553b67cef18fac3debe50daa540c139d2331f93722ffd"
+            },
+            "high_sierra": {
+              "url": "https://homebrew.bintray.com/bottles/lazygit-0.23.6.high_sierra.bottle.tar.gz",
+              "sha256": "76c6f8e89cd9335386cd5db6f6d13a697f5054a4e13ed4b5cd1a831964cb5db1"
+            }
+          }
+        }
+      },
+      "lazydocker": {
+        "version": "0.9.1",
+        "bottle": {
+          "cellar": ":any_skip_relocation",
+          "prefix": "/usr/local",
+          "files": {
+            "catalina": {
+              "url": "https://homebrew.bintray.com/bottles/lazydocker-0.9.1.catalina.bottle.tar.gz",
+              "sha256": "0a32a3111697ccba3b9f1d959f206c23a6b2fdc2fdb968f5eed12575c67e56b4"
+            },
+            "mojave": {
+              "url": "https://homebrew.bintray.com/bottles/lazydocker-0.9.1.mojave.bottle.tar.gz",
+              "sha256": "efe1cebae9966e4cbe0b55cfd28f6625d37b821827c7954168e80fc932ec57e2"
+            },
+            "high_sierra": {
+              "url": "https://homebrew.bintray.com/bottles/lazydocker-0.9.1.high_sierra.bottle.tar.gz",
+              "sha256": "79c56a22d891d09ce3b08ef1c400768dc68f2c5244b9a33070aae6f33e3d1e7b"
+            }
+          }
+        }
+      }
+    },
+    "tap": {
+      "universal-ctags/universal-ctags": {
+        "revision": "48798de4a2f12a1e4d3b7b638a093ca859a1e58f"
+      }
+    }
+  },
+  "system": {
+    "macos": {
+      "catalina": {
+        "HOMEBREW_VERSION": "2.5.6",
+        "HOMEBREW_PREFIX": "/usr/local",
+        "Homebrew/homebrew-core": "cd6f763b991dcb84d2b2176d2bfc28121995677e",
+        "CLT": "11.0.33.16",
+        "Xcode": "12.0.1",
+        "macOS": "10.15.7"
+      }
+    }
+  }
+}
