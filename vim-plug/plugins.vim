@@ -54,7 +54,7 @@ call plug#begin(stdpath('data') . '/plugged')
   Plug 'skywind3000/asyncrun.vim'
 
   " Programming
-  Plug 'neomake/neomake'
+  Plug 'sbdchd/neoformat'
   Plug 'neoclide/coc.nvim', { 'branch': 'release' }
   Plug 'sdiehl/vim-ormolu'
 

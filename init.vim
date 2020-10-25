@@ -9,7 +9,7 @@ source $HOME/.config/nvim/themes/airline.vim
 " Plugin config
 source $HOME/.config/nvim/keys/which-key.vim
 source $HOME/.config/nvim/plug-config/nerdtree.vim
-source $HOME/.config/nvim/plug-config/neomake.vim
+source $HOME/.config/nvim/plug-config/neoformat.vim
 source $HOME/.config/nvim/plug-config/floaterm.vim
 source $HOME/.config/nvim/plug-config/far.vim
 source $HOME/.config/nvim/plug-config/startify.vim

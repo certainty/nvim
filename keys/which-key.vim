@@ -30,6 +30,7 @@ let g:which_key_map.A = {
       \ 'r' : [':set norelativenumber!'  , 'relative line nums'],
       \ 's' : [':let @/ = ""'            , 'remove search highlight'],
       \ 'w' : [':StripWhitespace'        , 'strip whitespace'],
+      \ 'f' : [':Neoformat'        , 'format buffer'],
       \ }
 
 
