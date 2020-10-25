@@ -11,3 +11,9 @@ cd nvim
 brew bundle
 nvim
 ```
+
+### Rust setup
+
+```
+rustup component add rls rust-analysis rust-src
+```
