@@ -1,4 +1,13 @@
-## My VIM config
+## My NVIM setup
 
-### COC installations 
-Use `:CocList marketplace` to see the available extensions and install the one's you need.
+### Installation 
+
+On mac
+
+```
+cd ~/.config
+git clone git@github.com:certainty/nvim.git
+cd nvim
+brew bundle
+nvim
+```

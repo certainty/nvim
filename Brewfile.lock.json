@@ -67,6 +67,27 @@
             }
           }
         }
+      },
+      "neovim": {
+        "version": "0.4.4",
+        "bottle": {
+          "cellar": "/usr/local/Cellar",
+          "prefix": "/usr/local",
+          "files": {
+            "catalina": {
+              "url": "https://homebrew.bintray.com/bottles/neovim-0.4.4.catalina.bottle.tar.gz",
+              "sha256": "ade03fcf189ccd82e8b4627499113aed67a753b0e3ffa9662c15d7037f6ed617"
+            },
+            "mojave": {
+              "url": "https://homebrew.bintray.com/bottles/neovim-0.4.4.mojave.bottle.tar.gz",
+              "sha256": "e68135735b24df7e1318bb71c4fef6461884b2c7a166d756b4a21bd787a329a2"
+            },
+            "high_sierra": {
+              "url": "https://homebrew.bintray.com/bottles/neovim-0.4.4.high_sierra.bottle.tar.gz",
+              "sha256": "77773fc6e8ad7fd726e881850712f3995feef94548bfd6081599c5b682eb4411"
+            }
+          }
+        }
       }
     },
     "tap": {
@@ -80,9 +101,9 @@
       "catalina": {
         "HOMEBREW_VERSION": "2.5.6",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "cd6f763b991dcb84d2b2176d2bfc28121995677e",
-        "CLT": "11.0.33.16",
-        "Xcode": "12.0.1",
+        "Homebrew/homebrew-core": "9a12f513056e9a7a8582cbeade5f17957f37c39a",
+        "CLT": "1103.0.32.62",
+        "Xcode": "11.5",
         "macOS": "10.15.7"
       }
     }

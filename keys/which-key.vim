@@ -19,6 +19,7 @@ let g:which_key_map['p'] = [ ':Files'                         , 'search files' ]
 let g:which_key_map['q'] = [ 'q'                              , 'quit' ]
 let g:which_key_map['u'] = [ ':UndotreeToggle'                , 'undo tree']
 let g:which_key_map['W'] = [ 'w'                              , 'write' ]
+let g:which_key_map['S'] = [ ':Rg'                            , 'search' ]
 
 " A is for actions
 let g:which_key_map.A = {
@@ -39,13 +40,13 @@ let g:which_key_map.b = {
       \ 'name' : '+buffer' ,
       \ '1' : ['b1'        , 'buffer 1'],
       \ '2' : ['b2'        , 'buffer 2'],
-      \ 'd' : [':Bdelete'  , 'delete-buffer'],
+      \ 'd' : [':rdelete'  , 'delete-buffer'],
       \ 'h' : [':Startify' , 'home buffer'],
-      \ 'f' : ['bfirst'    , 'first-buffer'],
-      \ 'l' : ['blast'     , 'last-buffer'],
-      \ 'n' : ['bnext'     , 'next-buffer'],
-      \ 'p' : ['bprevious' , 'previous-buffer'],
-      \ '?' : ['Buffers'   , 'fzf-buffer'],
+      \ 'f' : [':bfirst'    , 'first-buffer'],
+      \ 'l' : [':blast'     , 'last-buffer'],
+      \ 'n' : [':bnext'     , 'next-buffer'],
+      \ 'p' : [':bprevious' , 'previous-buffer'],
+      \ '?' : [':Buffers'   , 'fzf-buffer'],
       \ }
 
 
@@ -69,7 +70,7 @@ let g:which_key_map.F = {
       \ 'b' : [':Buffers'  , 'buffers'],
       \ 'g' : [':GFiles'  , 'git files'],
       \ 'c' : [':Commits'  , 'git commits'],
-      \ 'a' : [':Ag'  , 'ag search'],
+      \ 'r' : [':Rg'  , 'rg search'],
       \ }
 
 

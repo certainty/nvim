@@ -57,11 +57,14 @@ call plug#begin(stdpath('data') . '/plugged')
   Plug 'sbdchd/neoformat'
   Plug 'neoclide/coc.nvim', { 'branch': 'release' }
   Plug 'sdiehl/vim-ormolu'
+  Plug 'jparise/vim-graphql'
 
   "search and replace
   Plug 'ChristianChiarulli/far.vim'
 
   "Plugins
+  Plug 'SirVer/ultisnips'
+  " collection of snippees
   Plug 'honza/vim-snippets'
 
 call plug#end()
