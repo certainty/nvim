@@ -1,4 +1,3 @@
-
 syntax enable
 set relativenumber
 filetype plugin indent on
@@ -29,3 +28,6 @@ set encoding=utf-8
 set nowrap
 set hidden
 set whichwrap+=<,>,[,],h,l
+set cmdheight=1
+set shortmess+=c
+

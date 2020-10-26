@@ -1,6 +1,9 @@
 if (has("termguicolors"))
   set termguicolors
 endif
-colorscheme gotham
+
+"colorscheme gotham
+"
+colorscheme onedark
 
 

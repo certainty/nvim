@@ -210,7 +210,6 @@ let g:which_key_map.l = {
 let g:which_key_map.t = {
       \ 'name' : '+terminal' ,
       \ ';' : [':FloatermNew --wintype=normal --height=6'       , 'terminal'],
-      \ 'f' : [':FloatermNew fzf'                               , 'fzf'],
       \ 'g' : [':FloatermNew lazygit'                           , 'git'],
       \ 'd' : [':FloatermNew lazydocker'                        , 'docker'],
       \ 't' : [':FloatermToggle'                                , 'toggle'],
@@ -239,8 +238,8 @@ let g:which_key_map.T = {
 " w is for windows
 let g:which_key_map.w = {
       \ 'name' : '+windows' ,
-      \ 'v' : [':vsplit'    , 'split vertically'],
-      \ 'h' : [':split'     , 'split horizontally'],
+      \ 'V' : [':vsplit'    , 'split vertically'],
+      \ 'H' : [':split'     , 'split horizontally'],
       \ }
 
 

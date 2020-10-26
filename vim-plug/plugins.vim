@@ -10,10 +10,11 @@ call plug#begin(stdpath('data') . '/plugged')
   
   " Themes
   Plug 'whatyouhide/vim-gotham'
+  Plug 'joshdick/onedark.vim'
+
   Plug 'keith/parsec.vim'
 
   Plug 'vim-airline/vim-airline'
-  Plug 'vim-airline/vim-airline-themes'
 
   " Default plugins
   Plug 'jiangmiao/auto-pairs'
@@ -54,6 +55,7 @@ call plug#begin(stdpath('data') . '/plugged')
   Plug 'skywind3000/asyncrun.vim'
 
   " Programming
+  Plug 'sheerun/vim-polyglot'
   Plug 'sbdchd/neoformat'
   Plug 'neoclide/coc.nvim', { 'branch': 'release' }
   Plug 'sdiehl/vim-ormolu'
