@@ -1,3 +1,5 @@
+" use system node instead of graalvm
+let g:coc_node_path = '/usr/local/bin/node'
 
 let g:coc_global_extensions = [
   \ 'coc-snippets',

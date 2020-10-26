@@ -21,7 +21,19 @@ let g:which_key_map['u'] = [ ':UndotreeToggle'                , 'undo tree']
 let g:which_key_map['W'] = [ 'w'                              , 'write' ]
 let g:which_key_map['S'] = [ ':Rg'                            , 'search' ]
 
-" A is for actions
+
+" Finding stuff
+
+" LSP specific stuff
+
+" Git 
+
+" Text actions including find and replace
+
+" Tasks
+
+
+""A is for actions
 let g:which_key_map.A = {
       \ 'name' : '+actions' ,
       \ 'e' : [':CocCommand explorer'    , 'explorer'],
