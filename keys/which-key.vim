@@ -84,37 +84,75 @@ let g:which_key_map['/'] = {
 
 
 " LSP specific stuff
-" c is for code
-let g:which_key_map.c = {
+" l is for lsp
+let g:which_key_map.l = {
       \ 'name' : '+lsp' ,
       \ '.' : [':CocConfig'                          , 'config'],
-      \ ';' : ['<Plug>(coc-refactor)'                , 'refactor'],
-      \ 'a' : ['<Plug>(coc-codeaction)'              , 'line action'],
-      \ 'A' : ['<Plug>(coc-codeaction-selected)'     , 'selected action'],
-      \ 'b' : [':CocNext'                            , 'next action'],
-      \ 'B' : [':CocPrev'                            , 'prev action'],
-      \ 'c' : [':CocList commands'                   , 'commands'],
-      \ 'd' : ['<Plug>(coc-definition)'              , 'definition'],
-      \ 'D' : ['<Plug>(coc-declaration)'             , 'declaration'],
+      \ 'a' : { 
+      \     'name': '+action',
+      \       'a' : ['<Plug>(coc-codeaction)'              , 'line action'],
+      \       'A' : ['<Plug>(coc-codeaction-selected)'     , 'selected action'],
+      \       'b' : [':CocNext'                            , 'next action'],
+      \       'B' : [':CocPrev'                            , 'prev action'],
+      \       },
+      \
+      \ 'c' : { 
+      \     'name': '+comment',
+      \         'c' : ['<Plug>NERDCommenterToggle'           , 'toggle'],
+      \         '$' : ['<Plug>NERDComenterToEOL'   , 'to EOL'],
+      \         'i' : ['<Plug>NERDComenterInvert'   , 'invert'],
+      \         'm' : ['<Plug>NERDComenterMinimal'   , 'minimal'],
+      \         'y' : ['<Plug>NERDComenterYank'   , 'yank'],
+      \       },
+      \
+      \ 'C' : [':CocList commands'                   , 'commands'],
+      \ 'd' : { 
+      \     'name': '+diagnostics',
+      \         'n' : ['<Plug>(coc-diagnostic-next)'         , 'next diagnostic'],
+      \         'N' : ['<Plug>(coc-diagnostic-next-error)'   , 'next error'],
+      \         'p' : ['<Plug>(coc-diagnostic-prev)'         , 'prev diagnostic'],
+      \         'P' : ['<Plug>(coc-diagnostic-prev-error)'   , 'prev error'],
+      \         'q' : ['<Plug>(coc-fix-current)'             , 'quickfix'],
+      \         'I' : [':CocList diagnostics'                , 'diagnostics'],
+      \       },
+      \
       \ 'e' : [':CocList extensions'                 , 'extensions'],
       \ 'f' : ['<Plug>(coc-format-selected)'         , 'format selected'],
       \ 'F' : ['<Plug>(coc-format)'                  , 'format'],
+      \
+      \ 'g' : { 
+      \     'name': '+goto',
+      \       'd' : ['<Plug>(coc-definition)'              , 'definition'],
+      \       'D' : ['<Plug>(coc-declaration)'             , 'declaration'],
+      \       'i' : ['<Plug>(coc-implementation)'          , 'implementation'],
+      \       'j' : ['<Plug>(coc-float-jump)'              , 'float jump'],
+      \       },
+      \
       \ 'h' : ['<Plug>(coc-float-hide)'              , 'hide'],
-      \ 'i' : ['<Plug>(coc-implementation)'          , 'implementation'],
-      \ 'I' : [':CocList diagnostics'                , 'diagnostics'],
-      \ 'j' : ['<Plug>(coc-float-jump)'              , 'float jump'],
       \ 'l' : ['<Plug>(coc-codelens-action)'         , 'code lens'],
-      \ 'n' : ['<Plug>(coc-diagnostic-next)'         , 'next diagnostic'],
-      \ 'N' : ['<Plug>(coc-diagnostic-next-error)'   , 'next error'],
       \ 'o' : [':Vista!!'                            , 'outline'],
       \ 'O' : [':CocList outline'                    , 'outline'],
-      \ 'p' : ['<Plug>(coc-diagnostic-prev)'         , 'prev diagnostic'],
-      \ 'P' : ['<Plug>(coc-diagnostic-prev-error)'   , 'prev error'],
-      \ 'q' : ['<Plug>(coc-fix-current)'             , 'quickfix'],
-      \ 'r' : ['<Plug>(coc-references)'              , 'references'],
-      \ 'R' : ['<Plug>(coc-rename)'                  , 'rename'],
-      \ 's' : [':CocList -I symbols'                 , 'references'],
-      \ 't' : ['<Plug>(coc-type-definition)'         , 'type definition'],
+      \ 'r' : { 
+      \     'name': '+refactor',
+      \         ';' : ['<Plug>(coc-refactor)'                , 'refactor'],
+      \         'r' : ['<Plug>(coc-rename)'                  , 'rename'],
+      \       },
+      \
+      \ 's' : { 
+      \     'name': '+show',
+      \         'R' : ['<Plug>(coc-references)'              , 'references'],
+      \         't' : ['<Plug>(coc-type-definition)'         , 'type definition'],
+      \       },
+      \
+      \ 't' : { 
+      \     'name': '+test',
+      \         't' : [':TestFile'              , 'file'],
+      \         'n' : [':TestNearest'              , 'nearest'],
+      \         's' : [':TestSuite'         , 'suite'],
+      \         'l' : [':TestLast'         , 'last'],
+      \         'v' : [':TestVisit'         , 'visit'],
+      \       },
+      \
       \ 'u' : [':CocListResume'                      , 'resume list'],
       \ 'U' : [':CocUpdate'                          , 'update CoC'],
       \ 'z' : [':CocDisable'                         , 'disable CoC'],
@@ -171,8 +209,7 @@ let g:which_key_map.x = {
       \ 'R' : [':Farr --source=rgnvim'     , 'find & replace in project'],
       \ 'f' : [':Neoformat'        , 'format buffer'],
       \ 'w' : [':StripWhitespace'        , 'strip whitespace'],
-      \ 'c' : [':commentary'        , 'comment'],
-      \ 'C' : [':<,>Commentary'        , 'comment block'],
+      \ 'c' : ['<Plug>NERDCommenterToggle'        , 'comment'],
       \ }
 
 
@@ -183,6 +220,7 @@ let g:which_key_map.r = {
       \ 'b' : [':AsyncTask -pos=floaterm project-build'     , 'build project'],
       \ 't' : [':AsyncTask -pos=floaterm project-test'      , 'test project'],
       \ 'c' : [':AsyncTask -pos=floaterm project-clean'     , 'clean project'],
+      \ 'R' : [':AsyncTask -pos=floaterm project-run'     , 'run project'],
       \ 'e' : [':AsyncTaskEdit'               , 'edit local tasks'],
       \ 'f' : [':AsyncTaskFzf'                , 'find task'],
       \ 'g' : [':AsyncTaskEdit!'              , 'edit global tasks'],
@@ -203,6 +241,7 @@ let g:which_key_map.t = {
       \ ';' : [':FloatermNew --wintype=normal --height=6'       , 'terminal'],
       \ 'g' : [':FloatermNew lazygit'                           , 'git'],
       \ 'd' : [':FloatermNew lazydocker'                        , 'docker'],
+      \ 'h' : [':FloatermNew htop'                        , 'htop'],
       \ 't' : [':FloatermToggle'                                , 'toggle'],
       \ }
 

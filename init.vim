@@ -19,3 +19,4 @@ source $HOME/.config/nvim/plug-config/vim-rooter.vim
 source $HOME/.config/nvim/plug-config/vim-commenter.vim
 source $HOME/.config/nvim/plug-config/async-task.vim
 source $HOME/.config/nvim/plug-config/fzf.vim
+source $HOME/.config/nvim/plug-config/vim-test.vim

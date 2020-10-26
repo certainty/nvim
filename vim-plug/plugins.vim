@@ -60,6 +60,7 @@ call plug#begin(stdpath('data') . '/plugged')
   Plug 'neoclide/coc.nvim', { 'branch': 'release' }
   Plug 'sdiehl/vim-ormolu'
   Plug 'jparise/vim-graphql'
+  Plug 'vim-test/vim-test'
 
   "search and replace
   Plug 'ChristianChiarulli/far.vim'
