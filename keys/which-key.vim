@@ -128,7 +128,8 @@ let g:which_key_map.l = {
       \       'j' : ['<Plug>(coc-float-jump)'              , 'float jump'],
       \       },
       \
-      \ 'h' : ['<Plug>(coc-float-hide)'              , 'hide'],
+      \ 'H' : ['<Plug>(coc-float-hide)'              , 'hide'],
+      \ 'h' : [":call CocActionAsync('doHover')"              , 'documentation hover'],
       \ 'l' : ['<Plug>(coc-codelens-action)'         , 'code lens'],
       \ 'o' : [':Vista!!'                            , 'outline'],
       \ 'O' : [':CocList outline'                    , 'outline'],

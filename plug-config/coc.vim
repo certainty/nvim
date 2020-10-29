@@ -24,7 +24,7 @@ let g:coc_global_extensions = [
   \ 'coc-marketplace',
   \ 'coc-tabnine',
   \ 'coc-highlight',
-  \ 'coc-rls',
+  \ 'coc-rust-analyzer',
   \ 'coc-graphql',
   \ 'coc-metals',
   \ ]
@@ -55,6 +55,9 @@ endfunction
 " format on enter, <cr> could be remapped by other vim plugin
 inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
                               \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+
+" Use K to show documentation in preview window.
+nnoremap <silent> K :call <SID>show_documentation()<CR>
 
 " TODO: add which-key binding
 function! s:show_documentation()
