@@ -55,10 +55,23 @@ call plug#begin(stdpath('data') . '/plugged')
   Plug 'skywind3000/asyncrun.vim'
 
   " Programming
+  "
+  " LSP support
+  "  "Plug 'neoclide/coc.nvim', { 'branch': 'release' }
+  " Native neovim lsp client
+  Plug 'neovim/nvim-lspconfig'
+  Plug 'nvim-lua/completion-nvim'
+  Plug 'sdiehl/vim-ormolu'
+
+  " Rust neovim client instead of coc
+"  Plug 'autozimu/LanguageClient-neovim', {
+"     \ 'branch': 'next',
+"     \ 'do': 'bash install.sh',
+"     \ }
+"
+" Other tools for programming
   Plug 'sheerun/vim-polyglot'
   Plug 'sbdchd/neoformat'
-  Plug 'neoclide/coc.nvim', { 'branch': 'release' }
-  Plug 'sdiehl/vim-ormolu'
   Plug 'jparise/vim-graphql'
   Plug 'vim-test/vim-test'
 

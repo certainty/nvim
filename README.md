@@ -17,3 +17,7 @@ nvim
 ```
 rustup component add rls rust-analysis rust-src
 ```
+
+### Haskell
+
+Make sure your haskell ide is setup with language server and ghcide

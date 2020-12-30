@@ -14,7 +14,12 @@ source $HOME/.config/nvim/plug-config/floaterm.vim
 source $HOME/.config/nvim/plug-config/far.vim
 source $HOME/.config/nvim/plug-config/startify.vim
 source $HOME/.config/nvim/plug-config/tabular.vim
-source $HOME/.config/nvim/plug-config/coc.vim
+" LSP
+source $HOME/.config/nvim/plug-config/lsp.vim
+source $HOME/.config/nvim/plug-config/completion.vim
+
+" source $HOME/.config/nvim/plug-config/coc.vim
+
 source $HOME/.config/nvim/plug-config/vim-rooter.vim
 source $HOME/.config/nvim/plug-config/vim-commenter.vim
 source $HOME/.config/nvim/plug-config/async-task.vim
