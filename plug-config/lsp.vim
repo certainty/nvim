@@ -1,6 +1,6 @@
  
 lua <<EOF
-require'lspconfig'.hls.setup{}
+require'lspconfig'.hls.setup{on_attach=require'completion'.on_attach}
 EOF
 
 " wrap the lua functions so that they can be used 
