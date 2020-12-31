@@ -61,13 +61,15 @@ let g:which_key_map.w = {
       \ 'name' : '+windows' ,
       \ 'v' : [':vsplit'    , 'split vertically'],
       \ 'H' : [':split'     , 'split horizontally'],
-      \ 'c' : [':bdelete'   , 'close window'],
-      \ 'w' : [':wincmd l'   , 'next window'],
+      \ 'c' : ['<C-W>c'   , 'close window'],
+      \ 'w' : ['<C-W>w'   , 'next window'],
       \ 'h' : [':wincmd h'  , 'left'],
       \ 'j' : [':wincmd j'  , 'down'],
       \ 'k' : [':wincmd k'  , 'up'],
       \ 'l' : [':wincmd l'  , 'right'],
       \ 'p' : [':wincmd p'  , 'previous'],
+      \ '=' : ['<C-W>='  , 'balance'],
+      \ '/' : ['Windows'  , 'fzf-window'],
       \ }
 
 
@@ -234,7 +236,6 @@ let g:which_key_map.g = {
       \ 'P' : [':Git pull'                         , 'pull'],
       \ 'r' : [':GRemove'                          , 'remove'],
       \ 's' : ['<Plug>(GitGutterStageHunk)'        , 'stage hunk'],
-      \ 'S' : [':!git status'                      , 'status'],
       \ 't' : [':GitGutterSignsToggle'             , 'toggle signs'],
       \ 'u' : ['<Plug>(GitGutterUndoHunk)'         , 'undo hunk'],
       \ 'v' : [':GV'                               , 'view commits'],
@@ -303,7 +304,6 @@ let g:which_key_map.t = {
 ""A is for actions
 let g:which_key_map.A = {
       \ 'name' : '+actions' ,
-      \ 'e' : [':CocCommand explorer'    , 'explorer'],
       \ 'm' : [':MarkdownPreview'        , 'markdown preview'],
       \ 'M' : [':MarkdownPreviewStop'    , 'markdown preview stop'],
       \ 'n' : [':set nonumber!'          , 'line-numbers'],
