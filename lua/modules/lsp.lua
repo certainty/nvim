@@ -5,9 +5,9 @@ local lsp_status = require('lsp-status')
 -- require'lspconfig'.hls.setup{on_attach=require'completion'.on_attach}
 
 local on_attach = function(client, bufnr)
---  diagnostic.on_attach(client, bufnr)
   completion.on_attach(client, bufnr)
   lsp_status.on_attach(client, bufnr)
+
 
   --local opts = { noremap=true, silent=true }
  -- vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
@@ -40,6 +40,19 @@ lsp_status.config({
     spinner_frames = { '⣾', '⣽', '⣻', '⢿', '⡿', '⣟', '⣯', '⣷' },
 })
 lsp_status.register_progress()
+
+-- Diagnostics
+vim.g.diagnostic_auto_popup_while_jump = 1
+vim.g.diagnostic_insert_delay = 1
+
+vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
+  vim.lsp.diagnostic.on_publish_diagnostics, {
+    virtual_text = false, -- no virtual text
+    signs = true,
+    update_in_insert = false,
+  }
+)
+
 
 -- Setup servers
 local servers = { 'hls', 'rust_analyzer' }
