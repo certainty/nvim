@@ -1,6 +1,13 @@
-" This is my main which key configuration, it provides all the mappings
-"
-"
+let mapleader=" "
+nnoremap <Space> <Nop>
+
+" Navigate splits
+nnoremap <silent> <leader>wh <C-w>h<CR>
+nnoremap <silent> <leader>wj <C-w>j<CR>
+nnoremap <silent> <leader>wk <C-w>k<CR>
+nnoremap <silent> <leader>wl <C-w>l<CR>
+
+
 " Map leader to which_key
 nnoremap <silent> <leader> :silent <c-u> :silent WhichKey '<Space>'<CR>
 vnoremap <silent> <leader> :silent <c-u> :silent WhichKeyVisual '<Space>'<CR>
@@ -12,12 +19,6 @@ let g:which_key_sep = '→'
 " set timeoutlen=100
 let g:which_key_display_names = {'<CR>': '↵', '<TAB>': '⇆'}
 let g:which_key_timeout = 100
-
-"nnoremap <leader>? :CocSearch <C-R>=expand("<cword>")<CR><CR>
-"let g:which_key_map['?'] = 'search word'
-
-" Single mappings
-let g:which_key_map['p'] = [ ':Files'           , 'search files' ]
 
 " Manage buffers
 " b is for buffers
@@ -34,42 +35,30 @@ let g:which_key_map.b = {
       \ 'p' : [':bprevious', 'previous-buffer'],
       \ }
 
-
-" Manage tabs
-" T is for Tabs
-let g:which_key_map.T = {
-      \ 'name' : '+tabline' ,
-      \ 'b' : [':XTabListBuffers'         , 'list buffers'],
-      \ 'd' : [':XTabCloseBuffer'         , 'close buffer'],
-      \ 'D' : [':XTabDeleteTab'           , 'close tab'],
-      \ 'h' : [':XTabHideBuffer'          , 'hide buffer'],
-      \ 'i' : [':XTabInfo'                , 'info'],
-      \ 'l' : [':XTabLock'                , 'lock tab'],
-      \ 'm' : [':XTabMode'                , 'toggle mode'],
-      \ 'n' : [':tabNext'                 , 'next tab'],
-      \ 'N' : [':XTabMoveBufferNext'      , 'buffer->'],
-      \ 't' : [':tabnew'                  , 'new tab'],
-      \ 'p' : [':tabprevious'             , 'prev tab'],
-      \ 'P' : [':XTabMoveBufferPrev'      , '<-buffer'],
-      \ 'x' : [':XTabPinBuffer'           , 'pin buffer'],
-      \ }
-
+let g:which_key_map.c = { 
+      \     'name': '+comment',
+      \         'c' : ['<Plug>NERDCommenterToggle' , 'toggle'],
+      \         '$' : ['<Plug>NERDComenterToEOL'   , 'to EOL'],
+      \         'i' : ['<Plug>NERDComenterInvert'  , 'invert'],
+      \         'm' : ['<Plug>NERDComenterMinimal' , 'minimal'],
+      \         'y' : ['<Plug>NERDComenterYank'    , 'yank'],
+      \       }
 
 " Manage Windows
 " w is for windows
 let g:which_key_map.w = {
-      \ 'name' : '+windows' ,
-      \ 'v' : [':vsplit'    , 'split vertically'],
-      \ 'H' : [':split'     , 'split horizontally'],
-      \ 'c' : ['<C-W>c'   , 'close window'],
-      \ 'w' : ['<C-W>w'   , 'next window'],
-      \ 'h' : [':wincmd h'  , 'left'],
-      \ 'j' : [':wincmd j'  , 'down'],
-      \ 'k' : [':wincmd k'  , 'up'],
-      \ 'l' : [':wincmd l'  , 'right'],
-      \ 'p' : [':wincmd p'  , 'previous'],
-      \ '=' : ['<C-W>='  , 'balance'],
-      \ '/' : ['Windows'  , 'fzf-window'],
+      \ 'name' : '+windows',
+      \ 'v' : [':vsplit'   , 'split vertically'],
+      \ 'H' : [':split'    , 'split horizontally'],
+      \ 'c' : ['<C-W>c'    , 'close window'],
+      \ 'w' : ['<C-W>w'    , 'next window'],
+      \ 'h' : [':wincmd h' , 'left'],
+      \ 'j' : [':wincmd j' , 'down'],
+      \ 'k' : [':wincmd k' , 'up'],
+      \ 'l' : [':wincmd l' , 'right'],
+      \ 'p' : [':wincmd p' , 'previous'],
+      \ '=' : ['<C-W>='    , 'balance'],
+      \ '/' : ['Windows'   , 'fzf-window'],
       \ }
 
 
@@ -88,9 +77,6 @@ let g:which_key_map['/'] = {
       \ 'G' : [':GFiles?'               , 'modified git files'],
       \ 'L' : [':Lines'                 , 'lines'] ,
       \ 'm' : [':Marks'                 , 'marks'] ,
-      \ 't' : [':Tags'                  , 'project tags'],
-      \ 'T' : [':BTags'                 , 'buffer tags'],
-      \ 's' : [':CocList snippets'      , 'snippets'],
       \ 'w' : [':Windows'               , 'search windows'],
       \ 'y' : [':Filetypes'             , 'file types'],
       \ 'z' : [':FZF'                   , 'FZF'],
@@ -99,9 +85,22 @@ let g:which_key_map['/'] = {
 
 " LSP specific stuff
 " l is for lsp
-"
+command! -nargs=0 LspCmdGotoDecl :lua vim.lsp.buf.declaration()
+command! -nargs=0 LspCmdGotoDef :lua vim.lsp.buf.definition()
+command! -nargs=0 LspCmdGotoImpl :lua vim.lsp.buf.implementation()
+command! -nargs=0 LspCmdRefs :lua vim.lsp.buf.references()
+command! -nargs=0 LspCmdHover :lua vim.lsp.buf.hover()
+command! -nargs=0 LspCmdSigHelp :lua vim.lsp.buf.signature_help()
+command! -nargs=0 LspCmdTypeDef :lua vim.lsp.buf.type_definition()
+command! -nargs=0 LspCmdDocSymbol :lua vim.lsp.buf.document_symbol()
+command! -nargs=0 LspCmdWsSymbol :lua vim.lsp.buf.workspace_symbol()
 
-let g:LspGotoDeclaration=luaeval("vim.lsp.buf.declaration")
+command! -nargs=0 LspCmdCodeAction :lua vim.lsp.buf.code_action()
+command! -nargs=0 LspCmdLineDiag :lua vim.lsp.buf.show_line_diagnostics()
+command! -nargs=0 LspCmdRefRename :lua vim.lsp.buf.rename()
+command! -nargs=0 LspCmdFormatting :lua vim.lsp.buf.formatting()
+command! -nargs=0 LspCmdIncomingCalls :lua vim.lsp.buf.incoming_calls()
+command! -nargs=0 LspCmdOutgoingCalls :lua vim.lsp.buf.outgoing_calls()
 
 let g:which_key_map.l = {
       \ 'name' : '+lsp' ,
@@ -136,81 +135,6 @@ let g:which_key_map.l = {
       \       'r' : [':LspCmdRefRename'     , 'rename'],
       \      },
       \ }
-
-" let g:which_key_map.l = {
-"       \ 'name' : '+lsp' ,
-"       \ '.' : [':CocConfig'                          , 'config'],
-"       \ 'a' : { 
-"       \     'name': '+action',
-"       \       'a' : ['<Plug>(coc-codeaction)'              , 'line action'],
-"       \       'A' : ['<Plug>(coc-codeaction-selected)'     , 'selected action'],
-"       \       'b' : [':CocNext'                            , 'next action'],
-"       \       'B' : [':CocPrev'                            , 'prev action'],
-"       \       },
-"       \
-"       \ 'c' : { 
-"       \     'name': '+comment',
-"       \         'c' : ['<Plug>NERDCommenterToggle'           , 'toggle'],
-"       \         '$' : ['<Plug>NERDComenterToEOL'   , 'to EOL'],
-"       \         'i' : ['<Plug>NERDComenterInvert'   , 'invert'],
-"       \         'm' : ['<Plug>NERDComenterMinimal'   , 'minimal'],
-"       \         'y' : ['<Plug>NERDComenterYank'   , 'yank'],
-"       \       },
-"       \
-"       \ 'C' : [':CocList commands'                   , 'commands'],
-"       \ 'd' : { 
-"       \     'name': '+diagnostics',
-"       \         'n' : ['<Plug>(coc-diagnostic-next)'         , 'next diagnostic'],
-"       \         'N' : ['<Plug>(coc-diagnostic-next-error)'   , 'next error'],
-"       \         'p' : ['<Plug>(coc-diagnostic-prev)'         , 'prev diagnostic'],
-"       \         'P' : ['<Plug>(coc-diagnostic-prev-error)'   , 'prev error'],
-"       \         'q' : ['<Plug>(coc-fix-current)'             , 'quickfix'],
-"       \         'I' : [':CocList diagnostics'                , 'diagnostics'],
-"       \       },
-"       \
-"       \ 'e' : [':CocList extensions'                 , 'extensions'],
-"       \ 'f' : ['<Plug>(coc-format-selected)'         , 'format selected'],
-"       \ 'F' : ['<Plug>(coc-format)'                  , 'format'],
-"       \
-"       \ 'g' : { 
-"       \     'name': '+goto',
-"       \       'd' : ['<Plug>(coc-definition)'              , 'definition'],
-"       \       'D' : ['<Plug>(coc-declaration)'             , 'declaration'],
-"       \       'i' : ['<Plug>(coc-implementation)'          , 'implementation'],
-"       \       'j' : ['<Plug>(coc-float-jump)'              , 'float jump'],
-"       \       },
-"       \
-"       \ 'H' : ['<Plug>(coc-float-hide)'              , 'hide'],
-"       \ 'h' : [":call CocActionAsync('doHover')"              , 'documentation hover'],
-"       \ 'l' : ['<Plug>(coc-codelens-action)'         , 'code lens'],
-"       \ 'o' : [':Vista!!'                            , 'outline'],
-"       \ 'O' : [':CocList outline'                    , 'outline'],
-"       \ 'r' : { 
-"       \     'name': '+refactor',
-"       \         ';' : ['<Plug>(coc-refactor)'                , 'refactor'],
-"       \         'r' : ['<Plug>(coc-rename)'                  , 'rename'],
-"       \       },
-"       \
-"       \ 's' : { 
-"       \     'name': '+show',
-"       \         'R' : ['<Plug>(coc-references)'              , 'references'],
-"       \         't' : ['<Plug>(coc-type-definition)'         , 'type definition'],
-"       \       },
-"       \
-"       \ 't' : { 
-"       \     'name': '+test',
-"       \         't' : [':TestFile'              , 'file'],
-"       \         'n' : [':TestNearest'              , 'nearest'],
-"       \         's' : [':TestSuite'         , 'suite'],
-"       \         'l' : [':TestLast'         , 'last'],
-"       \         'v' : [':TestVisit'         , 'visit'],
-"       \       },
-"       \
-"       \ 'u' : [':CocListResume'                      , 'resume list'],
-"       \ 'U' : [':CocUpdate'                          , 'update CoC'],
-"       \ 'z' : [':CocDisable'                         , 'disable CoC'],
-"       \ 'Z' : [':CocEnable'                          , 'enable CoC'],
-"       \ }
 
 " Git 
 " g is for git
@@ -288,7 +212,6 @@ let g:which_key_map.r = {
       \ 'x' : [':cclose'                      , 'close task view'],
       \ }
 
-
 " Terminal
 " t is for terminal
 let g:which_key_map.t = {
@@ -300,12 +223,19 @@ let g:which_key_map.t = {
       \ 't' : [':FloatermToggle'                                , 'toggle'],
       \ }
 
+let g:which_key_map.p = {
+      \ 'name' : '+packer' ,
+      \ 'i' : [':PackerInstall' , 'install'],
+      \ 'u' : [':PackerUpdate'  , 'update'],
+      \ 's' : [':PackerSync'    , 'sync'],
+      \ 'c' : [':PackerCompile' , 'compile'],
+      \ 'C' : [':PackerClean'   , 'clean'],
+      \ }
+
 
 ""A is for actions
 let g:which_key_map.A = {
       \ 'name' : '+actions' ,
-      \ 'm' : [':MarkdownPreview'        , 'markdown preview'],
-      \ 'M' : [':MarkdownPreviewStop'    , 'markdown preview stop'],
       \ 'n' : [':set nonumber!'          , 'line-numbers'],
       \ 'r' : [':set norelativenumber!'  , 'relative line nums'],
       \ 's' : [':let @/ = ""'            , 'remove search highlight'],
@@ -313,3 +243,4 @@ let g:which_key_map.A = {
       \ }
 
 call which_key#register('<Space>', "g:which_key_map")
+
