@@ -12,7 +12,10 @@ local init = function ()
   use 'vim-airline/vim-airline'
 
   -- The default stuff you need
-  use 'mhinz/vim-startify' 
+  use {
+    'mhinz/vim-startify',
+    config = "require('modules.startify')"
+  }
 
   use {
     'thaerkh/vim-workspace',

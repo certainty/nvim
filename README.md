@@ -8,16 +8,28 @@ On mac
 cd ~/.config
 git clone git@github.com:certainty/nvim.git
 cd nvim
-brew bundle
-nvim
+make
 ```
 
-### Rust setup
+#### Install all plugins
 
-```
-rustup component add rls rust-analysis rust-src
-```
+I'm using a lua based packager.
+So on first startup simply run `:PackerInstall` in neovim.
+This sets up all the required plugins and you should be ready to go
 
-### Haskell
 
-Make sure your haskell ide is setup with language server and ghcide
+### Directory layout
+
+I'm following pretty much the standard vim config layout.
+However it's worth mentioning how plugins are configured.
+
+As a general rule of thumb I try to configure my plugins in lua,
+which means you can find the config in `lua/plugin-config`.
+
+Some plugins are not well supported with lua config or I just haven't figured it out yet.
+In this case I put the config (which is vimscript) into `plugin-config`.
+
+### Key mappings
+
+I use which-key which is configured via `keys/which-key.vim`.
+

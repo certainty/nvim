@@ -11,6 +11,14 @@
           "cellar": ":any",
           "prefix": "/usr/local",
           "files": {
+            "big_sur": {
+              "url": "https://homebrew.bintray.com/bottles/ripgrep-12.1.1.big_sur.bottle.tar.gz",
+              "sha256": "0ca7397f9a0ccef6cbb8ff0fd8fb18c6fe86219abaef350e3d7ef248d07440fd"
+            },
+            "arm64_big_sur": {
+              "url": "https://homebrew.bintray.com/bottles/ripgrep-12.1.1.arm64_big_sur.bottle.tar.gz",
+              "sha256": "e0147ba489a8d96e33fc8be7e2172c632075d5d31a4f6267c3606e463280e0e3"
+            },
             "catalina": {
               "url": "https://homebrew.bintray.com/bottles/ripgrep-12.1.1.catalina.bottle.tar.gz",
               "sha256": "60460d422253113af3ed60332104f309638942821c655332211a6bc2213c472c"
@@ -27,72 +35,75 @@
         }
       },
       "lazygit": {
-        "version": "0.23.6",
+        "version": "0.24.2_1",
         "bottle": {
           "cellar": ":any_skip_relocation",
           "prefix": "/usr/local",
           "files": {
+            "big_sur": {
+              "url": "https://homebrew.bintray.com/bottles/lazygit-0.24.2_1.big_sur.bottle.tar.gz",
+              "sha256": "3b26ef0593a1255e23213d53a3eb04686e9b788b2984076bc87ba91fa89d0542"
+            },
+            "arm64_big_sur": {
+              "url": "https://homebrew.bintray.com/bottles/lazygit-0.24.2_1.arm64_big_sur.bottle.tar.gz",
+              "sha256": "d986e49449817c6820eefc699ae063a53e12afa8fce9c6898533669bbd2bd843"
+            },
             "catalina": {
-              "url": "https://homebrew.bintray.com/bottles/lazygit-0.23.6.catalina.bottle.tar.gz",
-              "sha256": "4c0f8a5b8d3c42ae57082ce605f55134464c4b0de7a0be1c0edf5d8de78241e6"
+              "url": "https://homebrew.bintray.com/bottles/lazygit-0.24.2_1.catalina.bottle.tar.gz",
+              "sha256": "fd59e8da5b076eafab4d02059e9d62685f47c8ffd2b041b88b215bc1813fd50e"
             },
             "mojave": {
-              "url": "https://homebrew.bintray.com/bottles/lazygit-0.23.6.mojave.bottle.tar.gz",
-              "sha256": "017eb2230fcd14fb654553b67cef18fac3debe50daa540c139d2331f93722ffd"
-            },
-            "high_sierra": {
-              "url": "https://homebrew.bintray.com/bottles/lazygit-0.23.6.high_sierra.bottle.tar.gz",
-              "sha256": "76c6f8e89cd9335386cd5db6f6d13a697f5054a4e13ed4b5cd1a831964cb5db1"
+              "url": "https://homebrew.bintray.com/bottles/lazygit-0.24.2_1.mojave.bottle.tar.gz",
+              "sha256": "95987d404639543c6174033c8f76a0d43549ffddbddba46759816d5c668d638c"
             }
           }
         }
       },
       "lazydocker": {
-        "version": "0.9.1",
+        "version": "0.10",
         "bottle": {
           "cellar": ":any_skip_relocation",
           "prefix": "/usr/local",
           "files": {
+            "big_sur": {
+              "url": "https://homebrew.bintray.com/bottles/lazydocker-0.10.big_sur.bottle.tar.gz",
+              "sha256": "68be351eabf1834a34465ee7ee44ef5d006252235d90374e0a35e4f2bceb408d"
+            },
+            "arm64_big_sur": {
+              "url": "https://homebrew.bintray.com/bottles/lazydocker-0.10.arm64_big_sur.bottle.tar.gz",
+              "sha256": "3bdd4a2361a64382d489fadd6c33880ebc974c5eba2a03c761fd13ae9ff8de7d"
+            },
             "catalina": {
-              "url": "https://homebrew.bintray.com/bottles/lazydocker-0.9.1.catalina.bottle.tar.gz",
-              "sha256": "0a32a3111697ccba3b9f1d959f206c23a6b2fdc2fdb968f5eed12575c67e56b4"
+              "url": "https://homebrew.bintray.com/bottles/lazydocker-0.10.catalina.bottle.tar.gz",
+              "sha256": "beb117f1a6967c87d619fb493ba6a4ec03b528ff55e568b8f740245e0679d1aa"
             },
             "mojave": {
-              "url": "https://homebrew.bintray.com/bottles/lazydocker-0.9.1.mojave.bottle.tar.gz",
-              "sha256": "efe1cebae9966e4cbe0b55cfd28f6625d37b821827c7954168e80fc932ec57e2"
+              "url": "https://homebrew.bintray.com/bottles/lazydocker-0.10.mojave.bottle.tar.gz",
+              "sha256": "0caabdbda1ce740c6a76952d40c8b8dc28acf936860d5f117113a9c3370ba84c"
             },
             "high_sierra": {
-              "url": "https://homebrew.bintray.com/bottles/lazydocker-0.9.1.high_sierra.bottle.tar.gz",
-              "sha256": "79c56a22d891d09ce3b08ef1c400768dc68f2c5244b9a33070aae6f33e3d1e7b"
+              "url": "https://homebrew.bintray.com/bottles/lazydocker-0.10.high_sierra.bottle.tar.gz",
+              "sha256": "129c5552e5b09b98e170878c7713e52310daa8c3ab507200935415e4621ee1ce"
             }
           }
         }
       },
       "neovim": {
-        "version": "0.4.4",
-        "bottle": {
-          "cellar": "/usr/local/Cellar",
-          "prefix": "/usr/local",
-          "files": {
-            "catalina": {
-              "url": "https://homebrew.bintray.com/bottles/neovim-0.4.4.catalina.bottle.tar.gz",
-              "sha256": "ade03fcf189ccd82e8b4627499113aed67a753b0e3ffa9662c15d7037f6ed617"
-            },
-            "mojave": {
-              "url": "https://homebrew.bintray.com/bottles/neovim-0.4.4.mojave.bottle.tar.gz",
-              "sha256": "e68135735b24df7e1318bb71c4fef6461884b2c7a166d756b4a21bd787a329a2"
-            },
-            "high_sierra": {
-              "url": "https://homebrew.bintray.com/bottles/neovim-0.4.4.high_sierra.bottle.tar.gz",
-              "sha256": "77773fc6e8ad7fd726e881850712f3995feef94548bfd6081599c5b682eb4411"
-            }
-          }
-        }
+        "version": "HEAD-69fc6c2",
+        "bottle": false
       }
     },
     "tap": {
       "universal-ctags/universal-ctags": {
-        "revision": "48798de4a2f12a1e4d3b7b638a093ca859a1e58f"
+        "revision": "841bdf137939c293c0a26a068c0bbc0e5be3fc1a"
+      }
+    },
+    "cask": {
+      "font-hack-nerd-font": {
+        "version": "2.1.0",
+        "options": {
+          "full_name": "homebrew/cask-fonts/font-hack-nerd-font"
+        }
       }
     }
   },
@@ -105,6 +116,14 @@
         "CLT": "1103.0.32.62",
         "Xcode": "11.5",
         "macOS": "10.15.7"
+      },
+      "big_sur": {
+        "HOMEBREW_VERSION": "2.7.1",
+        "HOMEBREW_PREFIX": "/usr/local",
+        "Homebrew/homebrew-core": "5ea37102b90a2426d57d15edf7f93fbb4441f37d",
+        "CLT": "12.3.0.0.1.1607026830",
+        "Xcode": "12.0",
+        "macOS": "11.1"
       }
     }
   }

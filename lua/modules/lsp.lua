@@ -47,9 +47,9 @@ vim.g.diagnostic_insert_delay = 1
 
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
   vim.lsp.diagnostic.on_publish_diagnostics, {
-    virtual_text = false, -- no virtual text
+    virtual_text = true, -- no virtual text
     signs = true,
-    update_in_insert = false,
+    update_in_insert = true,
   }
 )
 
