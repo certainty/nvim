@@ -27,31 +27,33 @@ local init = function ()
     run = './install --bin'
   }
 
+  use 'junegunn/fzf.vim'
+
   use {
-    'junegunn/fzf.vim',
-    config = "require('modules.fzf')"
+     'preservim/nerdcommenter',
+     config = "require('modules.nerdcommenter')"
   }
 
   use {
-    'tpope/vim-commentary',
+    'godlygeek/tabular',
+    config = "require('modules.tabular')"
+  }
+
+  use {
+    'airblade/vim-rooter',
+    config = "require('modules.vimrooter')"
+  }
+
+  use {
     'tpope/vim-repeat',
     'tpope/vim-sleuth',
     'jiangmiao/auto-pairs',
     'machakann/vim-sandwich',
-    'preservim/nerdcommenter',
-    'godlygeek/tabular',
-    'airblade/vim-rooter',
   }
 
   -- Nerdtree
-  use {
-    'scrooloose/nerdtree',
-    config = "require('modules.nerdtree')"
-  }
-
-  use {
-    'ryanoasis/vim-devicons'
-  }
+  use 'scrooloose/nerdtree'
+  use 'ryanoasis/vim-devicons'
 
   -- Text Object plugins
   use {
@@ -89,7 +91,6 @@ local init = function ()
   }
 
   use 'mbbill/undotree'
-
   use 'psliwka/vim-smoothie'
 
   -- Which-Key
@@ -111,7 +112,7 @@ local init = function ()
   -- Treesitter
   use {
     'nvim-treesitter/nvim-treesitter',
-    config = "require('modules.treesitter')",
+    config = "require('modules.treesitter')"
   }
 
   -- Haskell

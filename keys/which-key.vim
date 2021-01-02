@@ -101,6 +101,7 @@ command! -nargs=0 LspCmdRefRename :lua vim.lsp.buf.rename()
 command! -nargs=0 LspCmdFormatting :lua vim.lsp.buf.formatting()
 command! -nargs=0 LspCmdIncomingCalls :lua vim.lsp.buf.incoming_calls()
 command! -nargs=0 LspCmdOutgoingCalls :lua vim.lsp.buf.outgoing_calls()
+command! -nargs=0 LspCmdPeekDefinition :lua peek_definition()
 
 let g:which_key_map.l = {
       \ 'name' : '+lsp' ,
@@ -130,6 +131,11 @@ let g:which_key_map.l = {
       \     'name': '+format',
       \       'f' : [':LspCmdFormatting'     , 'formatting'],
       \      },
+      \ 'p' : { 
+      \     'name': '+peek',
+      \       'd' : [':LspCmdPeekDefinition'     , 'definition'],
+      \      },
+      \
       \ 'r' : { 
       \     'name': '+refactor',
       \       'r' : [':LspCmdRefRename'     , 'rename'],
