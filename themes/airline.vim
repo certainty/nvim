@@ -21,4 +21,5 @@ call airline#parts#define_function('lsp_status', 'LspStatus')
 call airline#parts#define_condition('lsp_status', 'luaeval("#vim.lsp.buf_get_clients() > 0")')
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#nvimlsp#enabled = 0
-let g:airline_section_warning = airline#section#create_left(['lsp_status'])
+let g:airline_section_warning = airline#section#create_right(['lsp_status'])
+let g:airline_statusline_ontop=0

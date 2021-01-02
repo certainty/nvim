@@ -78,10 +78,8 @@ local init = function ()
   -- Git
   use {
      'editorconfig/editorconfig-vim',
-     'airblade/vim-gitgutter',
      'tpope/vim-fugitive',
-     'tpope/vim-rhubarb',
-     'rhysd/git-messenger.vim'
+     'tpope/vim-rhubarb'
   }
 
   -- term
@@ -109,17 +107,14 @@ local init = function ()
   }
   use 'nvim-lua/lsp-status.nvim'
 
+  use 'sdiehl/vim-ormolu'
+  use 'neovimhaskell/haskell-vim'
+  use 'Twinside/vim-hoogle'
+
   -- Treesitter
   use {
     'nvim-treesitter/nvim-treesitter',
     config = "require('modules.treesitter')"
-  }
-
-  -- Haskell
-  use {
-    'neovimhaskell/haskell-vim',
-    'Twinside/vim-hoogle',
-    ft = 'haskell'
   }
 end
 
