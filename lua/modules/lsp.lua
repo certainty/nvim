@@ -97,12 +97,21 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
 )
 
 
--- Setup servers
-local servers = { 'hls', 'rust_analyzer' }
+-- Setup servers with status
+local servers = { 'hls' }
 for _, lsp in ipairs(servers) do
   nvim_lsp[lsp].setup {
     on_attach = on_attach,
     capabilities = lsp_status.capabilities
+  }
+end
+
+-- don't use status for rust analyzer as this slows things down
+local servers_no_status = { 'rust_analyzer' }
+
+for _, lsp in ipairs(servers_no_status) do
+  nvim_lsp[lsp].setup {
+    on_attach = completion.on_attach
   }
 end
 
