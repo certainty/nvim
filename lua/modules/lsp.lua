@@ -1,5 +1,5 @@
 local nvim_lsp   = require('lspconfig')
-local completion = require('completion')
+--local completion = require('completion')
 local lsp_status = require('lsp-status')
 
 -- Taken from https://www.reddit.com/r/neovim/comments/gyb077/nvimlsp_peek_defination_javascript_ttserver/
@@ -46,7 +46,7 @@ end
 
 
 local on_attach = function(client, bufnr)
-  completion.on_attach(client, bufnr)
+  --completion.on_attach(client, bufnr)
   lsp_status.on_attach(client, bufnr)
 
 
@@ -92,7 +92,7 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
   vim.lsp.diagnostic.on_publish_diagnostics, {
     virtual_text = true, -- no virtual text
     signs = true,
-    update_in_insert = true,
+    update_in_insert = false,
   }
 )
 

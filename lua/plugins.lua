@@ -1,3 +1,4 @@
+
 vim.cmd 'packadd cfilter'
 vim.cmd 'packadd packer.nvim'
 
@@ -65,9 +66,14 @@ local init = function ()
   }
 
   -- For autocompletion
+  --use {
+    --'nvim-lua/completion-nvim',
+    --config = "require('modules.completion')"
+  --}
+
   use {
-    'nvim-lua/completion-nvim',
-    config = "require('modules.completion')"
+    'hrsh7th/nvim-compe',
+    config = "require('modules.compe')"
   }
 
   use {
@@ -108,6 +114,7 @@ local init = function ()
   use 'nvim-lua/lsp-status.nvim'
 
   use 'sdiehl/vim-ormolu'
+--  use 'sbdchd/neoformat'
   use 'neovimhaskell/haskell-vim'
   use 'Twinside/vim-hoogle'
 

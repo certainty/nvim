@@ -12,3 +12,8 @@ source $HOME/.config/nvim/plugin-config/async-task.vim
 source $HOME/.config/nvim/plugin-config/far.vim
 source $HOME/.config/nvim/plugin-config/fzf.vim
 source $HOME/.config/nvim/plugin-config/nerdtree.vim
+source $HOME/.config/nvim/plugin-config/neoformat.vim
+
+
+" A few global settings
+au FocusGained,BufEnter * :checktime
